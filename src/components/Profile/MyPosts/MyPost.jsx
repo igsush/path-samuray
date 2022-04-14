@@ -1,20 +1,29 @@
-import React from 'react'
-import myPostClasses from './MyPost.module.css'
-import Post from './Post/Post'
+import React from "react";
+import myPostClasses from "./MyPost.module.css";
+import Post from "./Post/Post";
 
 const MyPost = () => {
-  return (
-    <div>
-        My posts
-        <div>New post</div>
-        <div className='posts'>
-          <Post message = 'hello!' count = '199'/>
-          <Post message = 'second post' count='5'/>
-          
-          <div className={myPostClasses.item}>post 2</div>
-        </div>
-      </div>
-  )
-}
+  let postsData = [
+    { id: 1, message: "hi man", likesCount: 199 },
+    { id: 2, message: "second post", likesCount: 777 },
+  ];
 
-export default MyPost
+  let postElements = postsData.map((post) => (
+    <Post message={post.message} count={post.likesCount} />
+  ));
+
+  return (
+    <div className={myPostClasses.postsBlock}>
+      <h3>My posts</h3>
+      <div>
+        <textarea></textarea>
+      </div>
+      <div>
+        <button>Add Post</button>
+      </div>
+      <div className={myPostClasses.posts}>{postElements}</div>
+    </div>
+  );
+};
+
+export default MyPost;
