@@ -11,7 +11,6 @@ const DialogsContainer = () => {
   return <StoreContext.Consumer>
       { store => {
         let state = store.getState();
-        console.log(store.getState().messagePage)
           let onSendMessageClick = () => {
               store.dispatch(sendMessageCreator());
           }

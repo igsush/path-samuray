@@ -6,12 +6,12 @@ import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
 import Profile from "./components/Profile/Profile";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
-import StoreContext from "./StoreContext";
+import { Provider } from "./StoreContext";
 
 const App = (props) => {
   return (
     <BrowserRouter>
-  <StoreContext.Provider value={store}>
+  <Provider store={store}>
       <div className="app-wrapper">
         <Header />
         <Nav />
@@ -22,7 +22,7 @@ const App = (props) => {
           </Routes>
         </div>
       </div>
-      </StoreContext.Provider>
+      </Provider>
     </BrowserRouter>
   );
 };

@@ -3,17 +3,13 @@ import myPostClasses from "./MyPost.module.css";
 import Post from "./Post/Post";
 
 const MyPost = (props) => {
-  console.log(props)
   let postElements = props.posts.map((post) => (
     <Post message={post.message} count={post.likesCount} />
-    //props.posts
   ));
 
   let postElement = React.createRef();
 
   let addPost = () => {
-    // props.addPost(textAlert);
-    // props.dispatch(addPostActionCreator())
     props.addPost()
   };
 

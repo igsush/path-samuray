@@ -10,6 +10,7 @@ const Post = (props) => {
       <span>like {props.count}</span>
       </div>
     </div>
+    
   );
 };
 

@@ -5,7 +5,6 @@ import Message from "./Messsage/Message";
 
 const Dialogs = (props) => {
   
-console.log(props)
   let state = props.dialogsPage
 
   
