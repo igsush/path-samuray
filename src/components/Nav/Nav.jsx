@@ -7,7 +7,6 @@ const Nav = () => {
     <nav className={navClasses.nav}>
       <div className={navClasses.item}>
         <NavLink
-          extract
           to="/profile"
           className={({ isActive }) =>
             isActive ? navClasses.activeLink : undefined
@@ -24,6 +23,17 @@ const Nav = () => {
           }
         >
           Message
+        </NavLink>
+      </div>
+      <div className={navClasses.item}>
+        <NavLink
+          extract
+          to="/users"
+          className={({ isActive }) =>
+            isActive ? navClasses.activeLink : undefined
+          }
+        >
+          Users
         </NavLink>
       </div>
       <div className={navClasses.item}>

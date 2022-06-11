@@ -27,7 +27,6 @@ const dialogsPageReducer = (state = initialState, action) => {
       return { ...state, newMessageBody: action.body };
 
     case SEND_MESSAGE:
-      
       let body = state.newMessageBody;
 
       return {
